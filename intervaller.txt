@@ -1,0 +1,21 @@
+- . ... -
+
+1 press
+0.4 pause
+
+0.3 press
+0.4 pause
+
+0.3 press
+0 pause
+0.3 press
+0 pause
+0.3 press
+0 pause
+
+1 press
+5 pause
+
+This is hnThis is a sentence written in PythonThis is a senteThis is a sentence written in Pythonin wri
+
+aaaaax
