@@ -45,31 +45,3 @@ while continue_menu:
         print("In morse code \"", user_answer,"\" is: ", in_morse )
     else:
         print("Input not recognized")
-#continue_loop = True
-#while continue_loop:
-#    timer.start()
-#    input("SOmkt")
-#    #Something
-#    time_diff = timer.stop()
-#    
-#    #Pause between presses
-#    if time_diff < 1:
-#        
-#        print("1")
-#    #Pause between signs
-#    elif time_diff < 2:
-#        print("2")
-#    #Pause for spaces
-#    elif time_diff < 4:
-#        print("4")
-#
-#    else:
-#        continue_loop = False
-#        print("Exiting loop...")
-#
-#
-#timer.start()
-#sleep(2.5)
-#diff = timer.stop()
-#
-#print(diff)da

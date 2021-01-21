@@ -1,7 +1,13 @@
+'''
+This is the interpreter, it takes either morse or alphabetical inout and outputs the other option. 
 
+
+
+'''
 
 class interpreter:
     
+    #constructor, initiates morse alphabets with other variables that will be needed
     def __init__(self):
         self.current_morse_char = ""
         self.complete_morse_sentence  = ""
@@ -64,24 +70,7 @@ class interpreter:
             "y" : "-.--",
             "z" : "--.."
         }
-
-
-    def set_sign_on_interval(self, input_time_interval):
-        if input_time_interval < x:
-            self.current_morse_char += "."
-         
-        elif input_time_interval < y:
-            self.current_morse_char += "-"
-         
-        #Erase this part? @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        elif input_time_interval < z:
-            try:
-                print("character deteced: ", self.morse_to_alphabet[self.current_morse_char])
-                self.complete_morse_sentence += self.morse_to_alphabet[self.current_morse_char]    
-            except:
-                print("Error, invalid input. Unrecognizable morse")
-            self.current_morse_char = ""
-            
+   
     
     #Continues the loop until a limit where no response is detected      
     def continous_interpreter(self, input_time_interval):
@@ -97,12 +86,14 @@ class interpreter:
                 
         return self.complete_morse_sentence
     
+    #Decide whether it is a line or a dot based on how long you hold the inout signal
     def line_or_dot(self, time):
         if time < 0.5:
             return "."
         else:
             return "-"
         
+    #This is for word partitioning, decide if it is a new word or not
     def continue_or_space(self, time):
         if time < 0.5:
             return ""
@@ -110,6 +101,8 @@ class interpreter:
             return " "
             
     
+    #This takes in a list of time intervals where x%2 == 0 is the length of the button press
+    #while the x%1 == 1 is the length of the pause between button presses
     def translate_time_list(self, time_list):
         morse_char = ""
         iterator = 0
@@ -122,10 +115,11 @@ class interpreter:
             else:
                     morse_char += self.continue_or_space(time)
             iterator += 1
-        print(morse_char)
+        #print(morse_char)
         return morse_char
                 
-                
+    
+    #This function translates alphabetical signs and outputs it in morse code            
     def letters_to_morse(self, sentence):
         morse_code = ""
     
@@ -138,7 +132,8 @@ class interpreter:
 
         return morse_code
         
-        
+    
+    #Translates morse code to alphabetical letters
     def morse_to_letters(self, morse):
         
         words = morse.split("|")

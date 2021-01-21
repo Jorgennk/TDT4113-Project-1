@@ -1,5 +1,6 @@
 '''
 pynput required for this test: pip3 install pynput
+This is a test class that writes test in morse signals
 
 '''
 

@@ -31,4 +31,5 @@ class simple_stopwatch:
         diff = round(self.end_time - self.start_time, 4)
         #print("Difference on interval: ", diff)
         
-        return diff
+        #return the time from when the stopwatch was started to when this method was run
+        return diff 
