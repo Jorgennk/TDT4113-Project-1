@@ -18,7 +18,7 @@ morse_message = "" #Don't really need this, declared it here for no underline in
 continue_menu = True
 
 while continue_menu:
-    choice = input("0 for exit, 1 for morse inout, 2 for text to morse: ")
+    choice = input("0 for exit, 1 for morse input, 2 for text to morse: ")
     
     if choice == "0":
         continue_menu = False
