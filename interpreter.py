@@ -144,7 +144,7 @@ class interpreter:
             char = word.split()
             print(char)
             for c in char:
-                print(iterator)
+                #print(iterator)
                 try:
                     print(self.morse_to_alphabet[c])
                     complete_alpha_sentence += self.morse_to_alphabet[c]
